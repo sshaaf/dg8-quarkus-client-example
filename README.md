@@ -24,5 +24,5 @@ How to get it working
     example, the cache in LON is distributed while the cache in NYC is replicated.
 
 To go further:
-Use the console or the [REST API](https://infinispan.org/docs/stable/titles/rest/rest.html#rest_v2_cache_operations) to 
-add some data and see how Infinispan replicates data across the clusters.
+Use the console or the [REST API](https://infinispan.org/docs/stable/titles/rest/rest.html#rest_v2_cache_operations)
+The app will add data from the UI, for more , play with the console for adding or removing data or use the REST API.
