@@ -27,7 +27,6 @@ import static org.acme.rest.json.Init.GAME_CACHE;
 @Consumes(MediaType.APPLICATION_JSON)
 public class GameResource {
 
-    //    private Set<Game> games = Collections.newSetFromMap(Collections.synchronizedMap(new LinkedHashMap<>()));
     private static final Logger LOGGER = LoggerFactory.getLogger(GameResource.class.getName());
 
     @Inject
@@ -39,9 +38,7 @@ public class GameResource {
 
     @GET
     public Set<Game> list() {
-
         Set<String> set = gameStore.keySet();
-
         Set<Game> gameSet = new HashSet<>();
         for(String game : set){
             gameSet.add(gameStore.get(game));
@@ -53,7 +50,6 @@ public class GameResource {
     @POST
     public Set<String> add(Game game) {
         gameStore.putAsync(game.getName(), game);
-
         return gameStore.keySet();
     }
 

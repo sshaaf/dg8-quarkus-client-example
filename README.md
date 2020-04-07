@@ -26,3 +26,11 @@ How to get it working
 To go further:
 Use the console or the [REST API](https://infinispan.org/docs/stable/titles/rest/rest.html#rest_v2_cache_operations)
 The app will add data from the UI, for more , play with the console for adding or removing data or use the REST API.
+
+## Deploying on Openshift
+To build on openshift `./mvnw clean package -Dquarkus.container-image.build=true`
+To deploy `./mvnw clean package -Dquarkus.kubernetes.deploy=true`
+
+Getting the datagrid secret
+`oc get secret datagrid-service-generated-secret \                                                                                                                                                                 14:46:32
+ -o jsonpath="{.data.identities\.yaml}" | base64 --decode`
